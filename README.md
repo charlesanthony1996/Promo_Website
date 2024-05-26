@@ -46,8 +46,23 @@ This project was developed as part of the AAI Project Semester at FHSTP BCC, inv
 
 ### Usage
 
+1. Start the development server:
+
+2. bash
+
+   npm run dev
+
+3. Open your browser and navigate to http://localhost:3000 to see the project in action.
 
 ### Building for Production
+
+- To build the project for production, run:
+
+- bash
+
+- npm run build
+
+- The production-ready files will be available in the dist folder.
 
 
 ### Development
