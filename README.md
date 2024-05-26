@@ -40,5 +40,5 @@ This project was developed as part of the AAI Project Semester at FHSTP BCC, inv
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/white-knight.git
-   cd white-knight
+   git clone https://github.com/charlesanthony1996/Promo_Website.git
+   cd Promo_Website
