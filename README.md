@@ -1,9 +1,44 @@
-# Vue 3 + TypeScript + Vite
+# White Knight - Hate Speech Detection and Counter Speech Extension
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Building for Production](#building-for-production)
+- [Development](#development)
+- [Project Structure](#project-structure)
+- [Scripts](#scripts)
+- [Custom CSS](#custom-css)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-## Recommended Setup
+## Project Overview
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+White Knight is a browser extension designed to combat hate speech in online communities by detecting and highlighting hateful comments, and providing users with counter speech options. Our goal is to promote positive and respectful interactions online, making the internet a safer and more welcoming place.
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+This project was developed as part of the AAI Project Semester at FHSTP BCC, involving a team of seven members from the AI Media Lab for the Bachelor of Creative Computing.
+
+## Features
+
+- **Hate Speech Detection**: Scans comments on YouTube videos and highlights hate speech.
+- **Counter Speech Generation**: Provides generated counter speech responses for detected hate speech comments.
+- **Regenerate Counter Speech**: Allows users to regenerate counter speech responses if they are not satisfied with the initial suggestions.
+- **Reply with Counter Speech**: Users can either copy the counter speech or directly insert it into the reply field.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+- A modern web browser (Chrome, Firefox, Edge, etc.)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/white-knight.git
+   cd white-knight
