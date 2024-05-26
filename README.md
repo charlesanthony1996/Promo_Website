@@ -42,3 +42,35 @@ This project was developed as part of the AAI Project Semester at FHSTP BCC, inv
    ```bash
    git clone https://github.com/charlesanthony1996/Promo_Website.git
    cd Promo_Website
+
+
+### Usage
+
+
+### Building for Production
+
+
+### Development
+
+
+
+### Project Structure
+
+
+
+### Scripts
+
+
+
+### Custom CSS
+
+
+### Contributing
+
+
+### License
+
+
+
+
+### Acknowledgements
