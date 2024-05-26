@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'daisyui';
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 70px;
+    height: auto;
+    margin-left: 25px; 
+    margin-top: 10px; 
+}
+
+.header-centered {
+    text-align: center;
+    margin-left: 100px;
+}
+
+nav.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav.tabs ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav.tabs ul li {
+    margin-right: 10px;
+}
+
+nav.tabs ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 16px;
+    
+
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav.tabs ul li a:hover {
+    background-color: #5ecfff;
+
+}
+
+footer {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.introText {
+   font-size:xx-large;
+   text-align: center;
+}
+
+
+
+
+.body-container3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 50px;
+}
+
+#Image {
+    width: 100%; 
+    height: auto;
+    margin-right: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.body-container3 p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    color: #333; 
+}
+
+.body-container3 ol {
+    list-style-type:none;
+    padding-left: 30px;
+}
+
+.body-container3 ol li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.body-container3 ol li:before {
+    content: "•";
+    color: #0015d1; 
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    left: -20px;
+    top: -5px;
+}
+
+
+
+.download-button {
+    padding: 15px 30px;
+    background-color: #5ecfff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 40px;
+}
+
+.download-button:hover {
+    background-color: #262495;
+}
+
+
+
+.body-container4 {
+    position: relative; 
+    margin-bottom: 50px;
+    padding: 40px;
+    text-align: center;
+}
+
+#featuresHeadline {
+    position: absolute; 
+    top: -30px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; 
+    text-align: center;
+    padding: 10px 20px; 
+}
+
+.body-container4 ol{
+    display: inline-block;
+    text-align: left; 
+    padding-left: 0; 
+    margin: 0 auto; 
+
+    margin-top: 20px; 
+}
+
+.body-container4 ol li,
+.body-container4 ul li {
+    margin-bottom: 15px;
+    position: relative;
+    color: #555; 
+    line-height: 1.5; 
+}
+
