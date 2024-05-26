@@ -1,0 +1,57 @@
+.header_shadow
+{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+:root, [data-theme] {
+    background-color: #ffffff; /* Set background color to white */
+    color: var(--fallback-bc, oklch(var(--bc) / 1));
+}
+
+/* Override button styles and add margin between buttons */
+.navbar-end .btn {
+    background-color: #5AB2FF;
+    color: #fff;
+    margin-left: 15px; 
+    border-style: none; 
+}
+
+.navbar-end .btn:hover {
+    background-color: #01204E;
+    color: #fff;
+    margin-left: 15px; 
+    border-style: none; 
+}
+
+.text-5xl {
+    color: black; 
+}
+
+.div_back .btn {
+    background-color: #5AB2FF;
+    color: #fff;
+    border-style: none; 
+}
+
+.div_back .btn:hover {
+    background-color: #01204E;
+    color: #fff;
+    border-style: none; 
+}
+
+.footer {
+    background-color: #01204E; 
+}
+
+.feature_items {
+    margin: 20px; 
+}
+
+.carousel-item{
+    width: 400px; 
+    height: 500px; 
+}
+
+.py-6 {
+    color:rgb(31, 31, 31); 
+}
