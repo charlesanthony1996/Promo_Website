@@ -58,26 +58,36 @@ This project was developed as part of the AAI Project Semester at FHSTP BCC, inv
 
 - To build the project for production, run:
 
-- bash
-
 - npm run build
 
 - The production-ready files will be available in the dist folder.
 
 
-### Development
-
-
+## Development
 
 ### Project Structure
 
+- Project Structure
+
+    - src/components: Vue components used in the application.
+    - src/assets: Static assets such as images and videos.
+    - src/router: Vue Router configuration.
+    - src/styles: CSS files for styling the application.
+    - src/views: Vue views (pages) of the application.
+    - src/main.ts: Entry point of the Vue application.
 
 
 ### Scripts
 
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the project for production.
+- `npm run preview`: Previews the production build.
+
 
 
 ### Custom CSS
+
+- The project uses custom CSS files located in the src/styles directory. You can import these styles in your components as needed.
 
 
 ### Contributing
@@ -85,7 +95,13 @@ This project was developed as part of the AAI Project Semester at FHSTP BCC, inv
 
 ### License
 
-
-
+- This project is licensed under the MIT License. See the LICENSE file for details.
 
 ### Acknowledgements
+
+- The team members of the AI Media Lab at FHSTP BCC for their contributions.
+- The developers of Vue.js and Vite for providing excellent tools for building modern web applications.
+
+- For more information, visit our FAQ page or contact us at your-email@example.com.
+
+- Ensure that the headings and subheadings are correctly formatted, and there are no missing sections. This should now display all the sections properly when rendered in Markdown.
