@@ -86,7 +86,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../styles/main.css";
+/* @import "../styles/main.css"; */
 @import "../styles/output.css";
 @import "../styles/custom.css";
 </style>
