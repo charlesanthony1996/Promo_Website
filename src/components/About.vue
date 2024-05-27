@@ -141,7 +141,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../styles/about.css";
+/* @import "../styles/about.css"; */
 @import "../styles/output.css";
 @import "../styles/custom.css";
 </style>
