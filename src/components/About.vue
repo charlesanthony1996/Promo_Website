@@ -112,7 +112,7 @@
             <div class="timeline-end mb-10">
               <time class="font-mono italic">June 2024</time>
               <div class="text-lg font-black">Final Product</div>
-              June concluded this project semester. We finished the extention and mainly focused on polishing. We focused more time on the marketing aspects and finished the preparations for the Vernissage. On June 14th the Project vernissage was held where we presented the outcome of our semester.
+              June concluded this project semester. We finished the extension and mainly focused on polishing. We focused more time on the marketing aspects and finished the preparations for the Vernissage. On June 14th the Project vernissage was held where we presented the outcome of our semester.
               <hr/>
             </div>
           </li>
@@ -129,6 +129,7 @@
         </p> 
         <p>Copyright © 2024 - All right reserved</p>
         <router-link to="/faq">FAQ</router-link>
+        <router-link to="/data_privacy">Data Privacy</router-link>
       </aside> 
     </footer>
   </div>

@@ -27,15 +27,14 @@
         <div class="div_back">
           <h1 class="text-5xl font-bold">How it works:</h1>
           <ol style="color: rgb(42, 42, 42); padding-bottom: 20px;">
-            <li>Detection and highlighting of Hatespeech.</li>
-            <li>Pick a generated counterspeech answer.</li>
+            <li>Detection and highlighting of Hate Speech.</li>
+            <li>Pick a generated counter speech answer.</li>
             <li>If you don't like the options, just hit the refresh button.</li>
           </ol>
           <button class="btn btn-wide" @click="downloadExtension">Download</button>
         </div>
       </div>
     </div>
-    
 
     <!-- Features -->
     <div class="hero min-h-screen" style="display:flex; flex-direction: column;">
@@ -68,7 +67,8 @@
           AAI Project Semester <br>FHSTP BCC
         </p>
         <p>Copyright © 2024 - All rights reserved</p>
-        <router-link to="/faq">FAQ</router-link>
+        <router-link to="/faq" class="footer_btn">FAQ</router-link>
+        <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link>
       </aside>
     </footer>
   </div>
