@@ -49,12 +49,12 @@
       <footer class="footer footer-center p-10 text-primary-content">
         <aside>
           <img width="50" height="50" src="../images/logo_3.png" />
-          <p class="font-bold">AAI Project Semester <br />FHSTP BCC</p>
-          <p>Copyright © 2024 - All right reserved</p>
+          <p class="font-bold" style="color: grey !important">AAI Project Semester <br />FHSTP BCC</p>
+          <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
           <!-- <a href="faq.html" class="footer_btn">FAQ</a> -->
-          <router-link to="/faq" class="footer_btn">FAQ</router-link>
+          <router-link to="/faq" class="footer_btn" style="color: grey !important">FAQ</router-link>
           <!-- <a href="data_privacy.html" class="footer_btn">Data Privacy</a> -->
-          <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link>
+          <router-link to="/data_privacy" class="footer_btn" style="color: grey !important">Data Privacy</router-link>
         </aside>
       </footer>
     </div>

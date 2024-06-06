@@ -124,12 +124,12 @@
     <footer class="footer footer-center p-10 text-primary-content">
       <aside>
         <img width="50" height="50" src="../images/logo_3.webp">
-        <p class="font-bold">
+        <p class="font-bold" style="color: grey !important">
           AAI Project Semester <br>FHSTP BCC 
         </p> 
-        <p>Copyright © 2024 - All right reserved</p>
-        <router-link to="/faq">FAQ</router-link>
-        <router-link to="/data_privacy">Data Privacy</router-link>
+        <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
+        <router-link to="/faq" style="color: grey !important">FAQ</router-link>
+        <router-link to="/data_privacy" style="color: grey !important">Data Privacy</router-link>
       </aside> 
     </footer>
   </div>
