@@ -14,6 +14,7 @@
         <div class="navbar-end">
           <router-link to="/" class="btn">Home</router-link>
           <router-link to="/about" class="btn">About</router-link>
+          <a class="ml-onclick-form btn" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a>
         </div>
       </div>
     </header>
@@ -59,19 +60,6 @@
       </div>
     </div>
 
-    <!-- subscription form -->
-    <div class="subscription-form" style="padding: 50px 0;background-color: #f0f0f0">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Subscribe to our newsletter</h2>
-        <p class="">Enter your email address to receive updates on our chrome extension release</p>
-        <form @submit.prevent="subscribe">
-          <input type="email" v-model="email" placeholder="Enter your email" required class="input input-bordered input-primary w-full max-w-xs mb-4">
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-        <p v-if="message" class="mt-4">{{ message }}</p>
-      </div>
-
-    </div>
 
     <!-- Footer -->
     <footer class="footer footer-center p-10 text-primary-content">
@@ -94,32 +82,42 @@ export default {
   data() {
     return {
       email: "",
-      message : ""
+      message: "",
+      subscribed: false // Track subscription status
     }
   },
   methods: {
     downloadExtension() {
       alert("Download in progress...");
     },
+    async subscribeAndShowForm() {
+      if (!this.subscribed) {
+        await this.subscribe(); // Subscribe only if not already subscribed
+        this.subscribed = true; // Mark as subscribed
+      }
+      this.showMailerLiteForm(); // Show MailerLite form
+    },
     async subscribe() {
-      try {
-        const response = await fetch("http://localhost:3300/subscribe", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ email: this.email })
-        }) 
+      // Subscribe logic
+      (function(w, d, e, u, f, l, n) {
+        w[f] = w[f] || function() {
+          (w[f].q = w[f].q || []).push(arguments);
+        };
+        l = d.createElement(e);
+        l.async = 1;
+        l.src = u;
+        n = d.getElementsByTagName(e)[0];
+        n.parentNode.insertBefore(l, n);
+      })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
 
-        if(response.ok) {
-          this.message = "Subscription successful! We will let you know when the Chrome extension is available for download."
-          this.email = ""
-        } else {
-          this.message = "Subscription failed. Please try again"
-        }
-      } catch(error) {
-        console.error("Error: ", error)
-        this.message = "An error occurred. Please try again"
+      ml('account', '975068');
+      // Additional subscription logic if needed
+    },
+    showMailerLiteForm() {
+      if (typeof ml === 'function') {
+        ml('show', 'KDQ7rA', true);
+      } else {
+        console.error("MailerLite is not initialized properly.");
       }
     }
   }
