@@ -100,6 +100,27 @@ export default {
   methods: {
     downloadExtension() {
       alert("Download in progress...");
+    },
+    async subscribe() {
+      try {
+        const response = await fetch("http://localhost:3300/subscribe", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email: this.email })
+        }) 
+
+        if(response.ok) {
+          this.message = "Subscription successful! We will let you know when the Chrome extension is available for download."
+          this.email = ""
+        } else {
+          this.message = "Subscription failed. Please try again"
+        }
+      } catch(error) {
+        console.error("Error: ", error)
+        this.message = "An error occurred. Please try again"
+      }
     }
   }
 }
