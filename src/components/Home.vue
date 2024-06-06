@@ -59,6 +59,20 @@
       </div>
     </div>
 
+    <!-- subscription form -->
+    <div class="subscription-form" style="padding: 50px 0;background-color: #f0f0f0">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Subscribe to our newsletter</h2>
+        <p class="">Enter your email address to receive updates on our chrome extension release</p>
+        <form @submit.prevent="subscribe">
+          <input type="email" v-model="email" placeholder="Enter your email" required class="input input-bordered input-primary w-full max-w-xs mb-4">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p v-if="message" class="mt-4">{{ message }}</p>
+      </div>
+
+    </div>
+
     <!-- Footer -->
     <footer class="footer footer-center p-10 text-primary-content">
       <aside>
@@ -77,6 +91,12 @@
 <script>
 export default {
   name: 'home',
+  data() {
+    return {
+      email: "",
+      message : ""
+    }
+  },
   methods: {
     downloadExtension() {
       alert("Download in progress...");
