@@ -5,11 +5,11 @@
       <div class="navbar bg-white">
         <div class="navbar-start">
           <router-link to="/">
-            <img src="../images/logo_3.webp" alt="Extension Icon">
+            <img src="../images/logo_3.webp" alt="Extension Icon" class="logo">
           </router-link>
         </div>
         <div class="navbar-center">
-          <h1 style="font-size: 48px; font-weight: bold;">White Knight</h1>
+          <h1 class="site-title">White Knight</h1>
         </div>
         <div class="navbar-end">
           <router-link to="/" class="btn">Home</router-link>
@@ -21,8 +21,8 @@
 
     <!-- Video / Download -->
     <div class="hero min-h-screen bg-base-200">
-      <div class="hero-content flex-row lg:flex-row">
-        <video width="1000" height="1200" autoplay loop>
+      <div class="hero-content flex-col lg:flex-row">
+        <video class="video-responsive" autoplay loop>
           <source src="../videos/Final_Animation_2frames.mp4" type="video/mp4">
         </video>
         <div class="div_back">
@@ -39,8 +39,8 @@
 
     <!-- Features -->
     <div class="hero min-h-screen" style="display:flex; flex-direction: column;">
-      <h1 style="font-size: 32px; font-weight: bold; color: black; padding: 25px">Features</h1>
-      <div class="hero-content flex-row lg:flex-row-reverse">
+      <h1 class="features-title">Features</h1>
+      <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="feature_items">
           <h1 class="text-5xl font-bold">HS Detection</h1>
           <p class="py-6">Our extension scans the comments under YouTube videos and highlights hate speech.</p>
@@ -59,7 +59,6 @@
         </div>
       </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="footer footer-center p-10 text-primary-content">
@@ -125,7 +124,160 @@ export default {
 </script>
 
 <style scoped>
-/* @import "../styles/main.css"; */
 @import "../styles/output.css";
 @import "../styles/custom.css";
+
+.header_shadow {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+:root, [data-theme] {
+    background-color: #ffffff;
+    color: var(--fallback-bc, oklch(var(--bc) / 1));
+}
+
+.navbar-end .btn {
+    background-color: #5AB2FF;
+    color: #fff;
+    margin-left: 15px; 
+    border-style: none; 
+}
+
+.navbar-end .btn:hover {
+    background-color: #01204E;
+    color: #fff;
+    margin-left: 15px; 
+    border-style: none; 
+}
+
+.text-5xl {
+    color: black; 
+}
+
+.div_back .btn {
+    background-color: #5AB2FF;
+    color: #fff;
+    border-style: none; 
+}
+
+.div_back .btn:hover {
+    background-color: #01204E;
+    color: #fff;
+    border-style: none; 
+}
+
+.footer {
+    background-color: #01204E; 
+}
+
+.feature_items {
+    margin: 20px; 
+}
+
+.carousel-item{
+    width: 400px; 
+    height: 500px; 
+}
+
+.py-6 {
+    color:rgb(31, 31, 31); 
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.video-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.features-section, .motivation-section, .team-section, .timeline-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .navbar-center h1 {
+    font-size: 32px;
+  }
+
+  .features-section .hero-content {
+    flex-direction: column;
+  }
+
+  .feature_items {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-center h1 {
+    font-size: 24px;
+  }
+
+  .navbar-end .btn {
+    margin-left: 10px;
+  }
+
+  .features-title {
+    font-size: 24px;
+  }
+
+  .feature_items h1 {
+    font-size: 20px;
+  }
+
+  .feature_items p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-end .btn {
+    margin-left: 5px;
+  }
+
+  .features-title {
+    font-size: 18px;
+  }
+
+  .feature_items h1 {
+    font-size: 18px;
+  }
+
+  .feature_items p {
+    font-size: 14px;
+  }
+
+  .navbar-center h1 {
+    font-size: 18px;
+  }
+
+  .navbar-end .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
 </style>
