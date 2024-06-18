@@ -23,7 +23,7 @@
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col lg:flex-row">
         <video class="video-responsive" autoplay loop>
-          <source src="../videos/Final_Animation_2frames.mp4" type="video/mp4">
+          <source src="../videos/New_Animation.mp4" type="video/mp4">
         </video>
         <div class="div_back">
           <h1 class="text-5xl font-bold">How it works:</h1>
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="hero min-h-screen" style="display:flex; flex-direction: column;">
       <h1 class="features-title">Features</h1>
       <div class="hero-content flex-col lg:flex-row-reverse">
