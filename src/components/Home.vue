@@ -88,6 +88,10 @@ export default {
   methods: {
     downloadExtension() {
       alert("Download in progress...");
+      const link = document.createElement("a")
+      link.href = "../dist.zip"
+      link.download = "dist.zip"
+      link.click()
     },
     async subscribeAndShowForm() {
       if (!this.subscribed) {
