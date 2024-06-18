@@ -89,8 +89,8 @@ export default {
     downloadExtension() {
       alert("Download in progress...");
       const link = document.createElement("a")
-      link.href = "../dist.zip"
-      link.download = "dist.zip"
+      link.href = "../extension-files.zip"
+      link.download = "extension-files.zip"
       link.click()
     },
     async subscribeAndShowForm() {
