@@ -28,7 +28,7 @@
           <img src="../images/mascot.png" alt="Mascot" />
         </div> 
         <div class="carousel-item">
-          <img src="../images/poster.png" alt="Poster" />
+          <img src="../images/Finished_poster.png" alt="Poster" />
         </div> 
       </div>
     </div>
