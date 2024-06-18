@@ -23,7 +23,7 @@
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col lg:flex-row">
         <video class="video-responsive" autoplay loop>
-          <source src="../videos/New_Animation.mp4" type="video/mp4">
+          <source src="../videos/New_Animation_.mp4" type="video/mp4">
         </video>
         <div class="div_back">
           <h1 class="text-5xl font-bold">How it works:</h1>
@@ -88,7 +88,7 @@ export default {
     downloadExtension() {
       alert("Download in progress...");
       const link = document.createElement("a")
-      link.href = "../extension-files.zip"
+      link.href = "./extension-files.zip"
       link.download = "extension-files.zip"
       link.click()
     },

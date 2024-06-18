@@ -24,7 +24,7 @@
             <h1 class="section-heading">{{ category.title }}</h1>
             <div v-for="(qa, index) in category.questions" :key="index">
               <p class="py-6"><strong>{{ qa.question }}</strong></p>
-              <p>{{ qa.answer }}</p>
+              <p class="py-6">{{ qa.answer }}</p>
               <br />
             </div>
           </div>
