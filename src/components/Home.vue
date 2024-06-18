@@ -36,8 +36,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Features -->
+    
     <div class="hero min-h-screen" style="display:flex; flex-direction: column;">
       <h1 class="features-title">Features</h1>
       <div class="hero-content flex-col lg:flex-row-reverse">
