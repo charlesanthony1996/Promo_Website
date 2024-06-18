@@ -88,7 +88,7 @@ export default {
     downloadExtension() {
       // alert("Download in progress...");
       const link = document.createElement("a")
-      link.href = "../../public/dist.zip"
+      link.href = "https://drive.google.com/file/d/1kPeVmpM_RKDwVBABAlglG7UDeYK5PXmS/view?usp=sharing"
       link.download = "dist.zip"
       link.click()
     },
