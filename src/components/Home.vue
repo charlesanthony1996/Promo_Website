@@ -81,7 +81,7 @@ export default {
     return {
       email: "",
       message: "",
-      subscribed: false // Track subscription status
+      subscribed: false
     }
   },
   methods: {
@@ -97,7 +97,7 @@ export default {
         await this.subscribe()
         this.subscribed = true
       }
-      this.showMailerLiteForm(); // Show MailerLite form
+      this.showMailerLiteForm()
     },
     async subscribe() {
       // Subscribe logic
@@ -110,16 +110,15 @@ export default {
         l.src = u;
         n = d.getElementsByTagName(e)[0];
         n.parentNode.insertBefore(l, n);
-      })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+      })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml')
 
-      ml('account', '975068');
-      // Additional subscription logic if needed
+      ml('account', '975068')
     },
     showMailerLiteForm() {
       if (typeof ml === 'function') {
         ml('show', 'KDQ7rA', true);
       } else {
-        console.error("MailerLite is not initialized properly.");
+        console.error("MailerLite is not initialized properly.")
       }
     }
   }
