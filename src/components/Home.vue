@@ -86,16 +86,16 @@ export default {
   },
   methods: {
     downloadExtension() {
-      alert("Download in progress...");
+      // alert("Download in progress...");
       const link = document.createElement("a")
-      link.href = "./extension-files.zip"
-      link.download = "extension-files.zip"
+      link.href = "./dist.zip"
+      link.download = "dist.zip"
       link.click()
     },
     async subscribeAndShowForm() {
       if (!this.subscribed) {
-        await this.subscribe(); // Subscribe only if not already subscribed
-        this.subscribed = true; // Mark as subscribed
+        await this.subscribe()
+        this.subscribed = true
       }
       this.showMailerLiteForm(); // Show MailerLite form
     },
