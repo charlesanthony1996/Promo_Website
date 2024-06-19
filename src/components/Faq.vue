@@ -1,6 +1,8 @@
 <template>
     <div>
+      <!---Header-->
       <header class="header_shadow">
+        <!--Navbar-->
         <div class="navbar bg-white">
           <div class="navbar-start">
             <router-link to="/">
@@ -11,15 +13,25 @@
             <h1 style="font-size: 48px; font-weight: bold;">Frequently Asked Questions</h1>
           </div>
           <div class="navbar-end">
-            <!-- <a href="main2.html" class="btn">Home</a> -->
-          <router-link to="/" class="btn">Home</router-link>
-            <!-- <a href="about.html" class="btn">About</a> -->
-          <router-link to="/about" class="btn">About</router-link>
+            <!--Dropdown Menu-->
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn m-1">Menu</div>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><router-link to="/" class="menu_item">Home</router-link> <!--Link to Main page--></li>
+                  <li><router-link to="/about" class="menu_item">About</router-link> <!--Link to About page--></li>
+                  <li><a class="menu_item" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a> <!--Link to Subsciption--></li>
+                </ul>
+            </div>
+
+          <!--<router-link to="/" class="btn">Home</router-link>
+          <router-link to="/about" class="btn">About</router-link>-->
           </div>
         </div>
       </header>
-  
+
+      <!--Banner-->
       <div class="banner">
+        <!--Individual Elements-->
         <section v-for="category in faq" :key="category.title" class="hero min-h-screen bg-base-200">
           <div class="hero-content text-left">
             <div class="max-w-md">
@@ -45,16 +57,15 @@
           </p>
         </div>
       </div>
-  
+
+      <!--Footer-->
       <footer class="footer footer-center p-10 text-primary-content">
         <aside>
-          <img width="50" height="50" src="../images/logo_3.png" />
+          <img width="50" height="50" src="../images/logo_3.png" /> <!--Inserting Logo-->
           <p class="font-bold" style="color: grey !important">AAI Project Semester <br />FHSTP BCC</p>
           <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
-          <!-- <a href="faq.html" class="footer_btn">FAQ</a> -->
-          <router-link to="/faq" class="footer_btn" style="color: grey !important">FAQ</router-link>
-          <!-- <a href="data_privacy.html" class="footer_btn">Data Privacy</a> -->
-          <router-link to="/data_privacy" class="footer_btn" style="color: grey !important">Data Privacy</router-link>
+          <router-link to="/faq" class="footer_btn">FAQ</router-link> <!--Link to the FAQ-->
+          <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link> <!--Link to Dataprivacy statement-->
         </aside>
       </footer>
     </div>
@@ -156,6 +167,8 @@
 
   @import "../styles/output.css";
   @import "../styles/custom.css";
+
+  @import "../style.css";
 
   .main-content {
     flex: 1;

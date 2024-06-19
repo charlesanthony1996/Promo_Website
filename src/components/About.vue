@@ -1,19 +1,32 @@
 <template>
   <div>
+    <!--Header-->
     <header class="header_shadow">
+      <!--Navbar-->
       <div class="navbar bg-white">
         <div class="navbar-start">
           <router-link to="/">
-            <img src="../images/logo_3.webp" alt="Extension Icon">
+            <img src="../images/logo_3.webp" alt="Extension Icon"> <!--Adding the icon-->
           </router-link>
         </div>
         <div class="navbar-center">
           <h1 style="font-size: 48px; font-weight: bold;">About the Project</h1>
         </div>
         <div class="navbar-end">
-          <router-link to="/" class="btn">Home</router-link>
+
+          <!--Dropdown Menu-->
+          <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn m-1">Menu</div>
+            <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+              <li><router-link to="/" class="menu_item">Home</router-link> <!--Link to Main page--></li>
+              <li><router-link to="/about" class="menu_item">About</router-link> <!--Link to About page--></li>
+              <li><a class="menu_item" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a> <!--Link to Subsciption--></li>
+            </ul>
+          </div>
+
+          <!--<router-link to="/" class="btn">Home</router-link> 
           <router-link to="/about" class="btn">About</router-link>
-          <a class="ml-onclick-form btn" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a>
+          <a class="ml-onclick-form btn" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a>-->
         </div>
       </div>
     </header>
@@ -22,13 +35,13 @@
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-row lg:flex-row" style="padding: 50px">
         <div class="carousel-item">
-          <img src="../images/logo_3.webp" alt="Logo" />
+          <img src="../images/logo_3.webp" alt="Logo" /> <!--Logo-->
         </div> 
         <div class="carousel-item">
-          <img src="../images/mascot.png" alt="Mascot" />
+          <img src="../images/mascot.png" alt="Mascot" /> <!--Mascot-->
         </div> 
         <div class="carousel-item">
-          <img src="../images/poster.png" alt="Poster" />
+          <img src="../images/Finished_Poster.png" alt="Poster" /> <!--Poster-->
         </div> 
       </div>
     </div>
@@ -124,13 +137,13 @@
     <!---Footer-->
     <footer class="footer footer-center p-10 text-primary-content">
       <aside>
-        <img width="50" height="50" src="../images/logo_3.webp">
+        <img width="50" height="50" src="../images/logo_3.webp"> <!--Inserting Logo-->
         <p class="font-bold" style="color: grey !important">
           AAI Project Semester <br>FHSTP BCC 
         </p> 
         <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
-        <router-link to="/faq" style="color: grey !important">FAQ</router-link>
-        <router-link to="/data_privacy" style="color: grey !important">Data Privacy</router-link>
+        <router-link to="/faq" class="footer_btn">FAQ</router-link> <!--Link to the FAQ-->
+          <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link> <!--Link to Dataprivacy statement-->
       </aside> 
     </footer>
   </div>
@@ -188,4 +201,6 @@ export default {
 /* @import "../styles/about.css"; */
 @import "../styles/output.css";
 @import "../styles/custom.css";
+
+@import "../style.css";
 </style>
