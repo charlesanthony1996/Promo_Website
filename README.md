@@ -1,20 +1,22 @@
 # White Knight - Hate Speech Detection and Counter Speech Extension
 
 ## Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Building for Production](#building-for-production)
-- [Development](#development)
-- [Project Structure](#project-structure)
-- [Scripts](#scripts)
-- [Custom CSS](#custom-css)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [White Knight - Hate Speech Detection and Counter Speech Extension](#white-knight---hate-speech-detection-and-counter-speech-extension)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Building for Production](#building-for-production)
+  - [Development](#development)
+    - [Project Structure](#project-structure)
+    - [Scripts](#scripts)
+    - [Custom CSS](#custom-css)
+    - [Contributing](#contributing)
+    - [License](#license)
+    - [Acknowledgements](#acknowledgements)
 
 ## Project Overview
 

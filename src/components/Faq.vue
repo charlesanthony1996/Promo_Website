@@ -1,59 +1,75 @@
 <template>
-  <div>
-    <header class="header_shadow">
-      <div class="navbar bg-white">
-        <div class="navbar-start">
-          <router-link to="/">
-            <img src="../images/logo_3.png" alt="Extension Icon" class="logo">
+    <div>
+      <!---Header-->
+      <header class="header_shadow">
+        <!--Navbar-->
+        <div class="navbar bg-white">
+          <div class="navbar-start">
+            <router-link to="/">
+            <img src="../images/logo_3.png" alt="Extension Icon">
           </router-link>
-        </div>
-        <div class="navbar-center">
-          <h1 class="site-title">Frequently Asked Questions</h1>
-        </div>
-        <div class="navbar-end">
-          <router-link to="/" class="btn">Home</router-link>
-          <router-link to="/about" class="btn">About</router-link>
-        </div>
-      </div>
-    </header>
-
-    <div class="banner">
-      <section v-for="category in faq" :key="category.title" class="hero min-h-screen bg-base-200">
-        <div class="hero-content text-left">
-          <div class="max-w-md">
-            <h1 class="section-heading">{{ category.title }}</h1>
-            <div v-for="(qa, index) in category.questions" :key="index">
-              <p class="py-6"><strong>{{ qa.question }}</strong></p>
-              <p class="py-6">{{ qa.answer }}</p>
-              <br />
+          </div>
+          <div class="navbar-center">
+            <h1 style="font-size: 48px; font-weight: bold;">Frequently Asked Questions</h1>
+          </div>
+          <div class="navbar-end">
+            <!--Dropdown Menu-->
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn m-1">Menu</div>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><router-link to="/" class="menu_item">Home</router-link> <!--Link to Main page--></li>
+                  <li><router-link to="/about" class="menu_item">About</router-link> <!--Link to About page--></li>
+                  <li><a class="menu_item" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a> <!--Link to Subsciption--></li>
+                </ul>
             </div>
+
+          <!--<router-link to="/" class="btn">Home</router-link>
+          <router-link to="/about" class="btn">About</router-link>-->
           </div>
         </div>
-      </section>
-    </div>
+      </header>
 
-    <div class="hero min-h-screen bg-base-200">
-      <div class="hero-content text-center">
-        <p>
-          <strong>
-            I hope this FAQ helps you get the most out of our Chrome Extension.
-            <br />
-            Thank you for using our extension to make the internet a more positive place!
-          </strong>
-        </p>
+      <!--Banner-->
+      <div class="banner">
+        <!--Individual Elements-->
+        <section v-for="category in faq" :key="category.title" class="hero min-h-screen bg-base-200">
+          <div class="hero-content text-left">
+            <div class="max-w-md">
+              <h1 class="section-heading">{{ category.title }}</h1>
+              <div v-for="(qa, index) in category.questions" :key="index">
+                <p class="py-6"><strong>{{ qa.question }}</strong></p>
+                <p>{{ qa.answer }}</p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+  
+      <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+          <p>
+            <strong>
+              I hope this FAQ helps you get the most out of our Chrome Extension.
+              <br />
+              Thank you for using our extension to make the internet a more positive place!
+            </strong>
+          </p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <footer class="footer footer-center p-10 text-primary-content">
+        <aside>
+          <img width="50" height="50" src="../images/logo_3.png" /> <!--Inserting Logo-->
+          <p class="font-bold" style="color: grey !important">AAI Project Semester <br />FHSTP BCC</p>
+          <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
+          <router-link to="/faq" class="footer_btn">FAQ</router-link> <!--Link to the FAQ-->
+          <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link> <!--Link to Dataprivacy statement-->
+        </aside>
+      </footer>
     </div>
 
-    <footer class="footer footer-center p-10 text-primary-content">
-      <aside>
-        <img width="50" height="50" src="../images/logo_3.png" />
-        <p class="font-bold" style="color: grey !important">AAI Project Semester <br />FHSTP BCC</p>
-        <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
-        <router-link to="/faq" class="footer_btn" style="color: grey !important">FAQ</router-link>
-        <router-link to="/data_privacy" class="footer_btn" style="color: grey !important">Data Privacy</router-link>
-      </aside>
-    </footer>
-  </div>
 </template>
 
 <script>
@@ -151,6 +167,7 @@ export default {
 <style scoped>
 @import "../styles/output.css";
 @import "../styles/custom.css";
+@import "../style.css";
 
 .header_shadow {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -227,6 +244,13 @@ export default {
     border-width: 18px;
     border-color: #aaaaaa;
     padding: 20px;
+}
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 800px;
 }

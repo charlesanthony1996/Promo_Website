@@ -5,7 +5,12 @@
 
 :root, [data-theme] {
     background-color: #ffffff; /* Set background color to white */
-    color: var(--fallback-bc, oklch(var(--bc) / 1));
+    color: var(--fallback-bc, oklch(var(--bc) / 1));   
+}
+
+.menu_item:hover{
+    color: white;
+    background-color: #5AB2FF; 
 }
 
 /* Override button styles and add margin between buttons */
@@ -43,6 +48,14 @@
     background-color: #01204E; 
 }
 
+.footer_btn{
+    color: grey; 
+}
+
+.footer_btn:hover{
+    color: white; 
+}
+
 .feature_items {
     margin: 20px; 
 }
@@ -54,4 +67,25 @@
 
 .py-6 {
     color:rgb(31, 31, 31); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar img {
+    max-height: 80px;
+}
+
+.navbar-center h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.navbar-end {
+    display: flex;
+    align-items: center;
 }
