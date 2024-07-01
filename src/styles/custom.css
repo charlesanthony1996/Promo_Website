@@ -57,7 +57,13 @@
 }
 
 .feature_items {
-    margin: 20px; 
+    margin: 20px;
+    margin-top: 120px; 
+}
+
+.feature_items_mot {
+    margin: 20px;
+    margin-top: 200px; 
 }
 
 .carousel-item{

@@ -6,11 +6,7 @@
       <div class="navbar bg-white">
         <div class="navbar-start">
           <router-link to="/">
-<<<<<<< HEAD
             <img src="../images/logo_3.webp" alt="Extension Icon" class="logo">
-=======
-            <img src="../images/logo_3.webp" alt="Extension Icon"> <!--Adding the icon-->
->>>>>>> origin/main
           </router-link>
         </div>
         <div class="navbar-center">
@@ -45,11 +41,7 @@
           <img src="../images/mascot.png" alt="Mascot" /> <!--Mascot-->
         </div> 
         <div class="carousel-item">
-<<<<<<< HEAD
           <img src="../images/Finished_Poster.png" alt="Poster"/>
-=======
-          <img src="../images/Finished_Poster.png" alt="Poster" /> <!--Poster-->
->>>>>>> origin/main
         </div> 
       </div>
     </div>
@@ -58,12 +50,15 @@
     <div class="hero min-h-screen motivation-section">
       <h1 class="section-title">Motivation</h1>
       <div class="hero-content flex-col lg:flex-row-reverse">
-        <div class="feature_items">
+        <div class="feature_items_mot">
           <p class="py-6">
             Hate Speech can seriously harm individuals and create negativity in online communities so we want to give users the tools to detect and counter Hate Speech to lower the barriers for actively participating in combating Hate Speech online.
+     
             Our plan for the long run is that we want to promote positive conversations instead of hateful ones, to create a safer and more welcoming online environment.
             By encouraging respectful interactions, we aim to make a positive impact on how people communicate.
-          </p>
+      
+            By encouraging respectful interactions, we aim to make a positive impact on how people communicate.
+         </p>
         </div>
       </div>
     </div>
