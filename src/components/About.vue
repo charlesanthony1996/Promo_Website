@@ -1,19 +1,36 @@
 <template>
   <div>
+    <!--Header-->
     <header class="header_shadow">
+      <!--Navbar-->
       <div class="navbar bg-white">
         <div class="navbar-start">
           <router-link to="/">
+<!-- <<<<<<< HEAD
             <img src="../images/logo_3.webp" alt="Extension Icon" class="logo">
+======= -->
+            <img src="../images/logo_3.webp" alt="Extension Icon"> <!--Adding the icon-->
+<!-- >>>>>>> origin/main -->
           </router-link>
         </div>
         <div class="navbar-center">
           <h1 class="site-title">About the Project</h1>
         </div>
         <div class="navbar-end">
-          <router-link to="/" class="btn">Home</router-link>
+
+          <!--Dropdown Menu-->
+          <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn m-1">Menu</div>
+            <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+              <li><router-link to="/" class="menu_item">Home</router-link> <!--Link to Main page--></li>
+              <li><router-link to="/about" class="menu_item">About</router-link> <!--Link to About page--></li>
+              <li><a class="menu_item" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a> <!--Link to Subsciption--></li>
+            </ul>
+          </div>
+
+          <!--<router-link to="/" class="btn">Home</router-link> 
           <router-link to="/about" class="btn">About</router-link>
-          <a class="ml-onclick-form btn" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a>
+          <a class="ml-onclick-form btn" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a>-->
         </div>
       </div>
     </header>
@@ -22,13 +39,17 @@
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col lg:flex-row" style="padding: 50px">
         <div class="carousel-item">
-          <img src="../images/logo_3.webp" alt="Logo" />
+          <img src="../images/logo_3.webp" alt="Logo" /> <!--Logo-->
         </div> 
         <div class="carousel-item">
-          <img src="../images/mascot.png" alt="Mascot" />
+          <img src="../images/mascot.png" alt="Mascot" /> <!--Mascot-->
         </div> 
         <div class="carousel-item">
+<!-- <<<<<<< HEAD
           <img src="../images/Finished_Poster.png" alt="Poster"/>
+======= -->
+          <img src="../images/Finished_Poster.png" alt="Poster" /> <!--Poster-->
+<!-- >>>>>>> origin/main -->
         </div> 
       </div>
     </div>
@@ -132,13 +153,13 @@
     <!---Footer-->
     <footer class="footer footer-center p-10 text-primary-content">
       <aside>
-        <img width="50" height="50" src="../images/logo_3.webp">
+        <img width="50" height="50" src="../images/logo_3.webp"> <!--Inserting Logo-->
         <p class="font-bold" style="color: grey !important">
           AAI Project Semester <br>FHSTP BCC 
         </p> 
         <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
-        <router-link to="/faq" style="color: grey !important">FAQ</router-link>
-        <router-link to="/data_privacy" style="color: grey !important">Data Privacy</router-link>
+        <router-link to="/faq" class="footer_btn">FAQ</router-link> <!--Link to the FAQ-->
+          <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link> <!--Link to Dataprivacy statement-->
       </aside> 
     </footer>
   </div>
@@ -197,134 +218,5 @@ export default {
 @import "../styles/output.css";
 @import "../styles/custom.css";
 
-.header_shadow {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-:root, [data-theme] {
-    background-color: #ffffff;
-    color: var(--fallback-bc, oklch(var(--bc) / 1));
-}
-
-.navbar-end .btn {
-    background-color: #5AB2FF;
-    color: #fff;
-    margin-left: 15px; 
-    border-style: none; 
-}
-
-.navbar-end .btn:hover {
-    background-color: #01204E;
-    color: #fff;
-    margin-left: 15px; 
-    border-style: none; 
-}
-
-.text-5xl {
-    color: black; 
-}
-
-.div_back .btn {
-    background-color: #5AB2FF;
-    color: #fff;
-    border-style: none; 
-}
-
-.div_back .btn:hover {
-    background-color: #01204E;
-    color: #fff;
-    border-style: none; 
-}
-
-.footer {
-    background-color: #01204E; 
-}
-
-.feature_items {
-    margin: 20px; 
-}
-
-.carousel-item{
-    width: 400px; 
-    height: 500px; 
-}
-
-.py-6 {
-    color: rgb(31, 31, 31); 
-}
-
-.logo {
-    max-width: 100px;
-    height: auto;
-}
-
-.site-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.features-section, .motivation-section, .team-section, .timeline-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: black;
-    padding: 10px;
-    text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .hero-content {
-    flex-direction: column;
-  }
-
-  .navbar-center h1 {
-    font-size: 32px;
-  }
-
-  .section-title {
-    font-size: 24px;
-  }
-
-  .feature_items {
-    margin: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-center h1 {
-    font-size: 24px;
-  }
-
-  .navbar-end .btn {
-    margin-left: 10px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-
-  .feature_items h1 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-end .btn {
-    margin-left: 5px;
-  }
-
-  .section-title {
-    font-size: 18px;
-  }
-
-  .feature_items h1 {
-    font-size: 18px;
-  }
-}
+@import "../style.css";
 </style>

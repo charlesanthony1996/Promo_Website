@@ -1,23 +1,37 @@
 <template>
   <div>
+    <!---Header-->
     <header class="header_shadow">
+      <!--Navbar-->
       <div class="navbar bg-white">
         <div class="navbar-start">
           <router-link to="/">
-            <img src="../images/logo_3.png" alt="Extension Icon" class="logo">
-          </router-link>
+          <img src="../images/logo_3.png" alt="Extension Icon"> <!--Adding the icon-->
+        </router-link>
         </div>
         <div class="navbar-center">
-          <h1 class="site-title">Data Privacy</h1>
+          <h1 style="font-size: 48px; font-weight: bold;">Data Privacy</h1> <!--Title-->
         </div>
         <div class="navbar-end">
-          <router-link to="/" class="btn">Home</router-link>
-          <router-link to="/about" class="btn">About</router-link>
+          <!--Dropdown Menu-->
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn m-1">Menu</div>
+              <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><router-link to="/" class="menu_item">Home</router-link> <!--Link to Main page--></li>
+                <li><router-link to="/about" class="menu_item">About</router-link> <!--Link to About page--></li>
+                <li><a class="menu_item" href="javascript:void(0)" @click="subscribeAndShowForm">Subscribe!</a> <!--Link to Subsciption--></li>
+              </ul>
+          </div>
+          
+        <!--<router-link to="/" class="btn">Home</router-link>
+        <router-link to="/about" class="btn">About</router-link>-->
         </div>
       </div>
     </header>
-
+    
+    <!--Banner-->
     <div class="banner">
+      <!--Individual Elements-->
       <section v-for="section in sections" :key="section.heading" class="hero min-h-screen bg-base-200">
         <div class="hero-content text-left">
           <div class="max-w-md">
@@ -44,8 +58,8 @@
         <img width="50" height="50" src="../images/logo_3.png" />
         <p class="font-bold" style="color: grey !important">AAI Project Semester <br />FHSTP BCC</p>
         <p style="color: grey !important">Copyright © 2024 - All right reserved</p>
-        <router-link to="/faq" class="footer_btn" style="color: grey !important">FAQ</router-link>
-        <router-link to="/data_privacy" class="footer_btn" style="color: grey !important">Data Privacy</router-link>
+        <router-link to="/faq" class="footer_btn">FAQ</router-link> <!--Link to the FAQ-->
+        <router-link to="/data_privacy" class="footer_btn">Data Privacy</router-link> <!--Link to Dataprivacy statement-->
       </aside>
     </footer>
   </div>
@@ -92,143 +106,47 @@ export default {
 </script>
 
 <style scoped>
+
 @import "../styles/output.css";
 @import "../styles/custom.css";
 
-.header_shadow {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
+@import "../style.css";
 
-:root, [data-theme] {
-    background-color: #ffffff;
-    color: var(--fallback-bc, oklch(var(--bc) / 1));
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-
-.navbar-end .btn {
-    background-color: #5AB2FF;
-    color: #fff;
-    margin-left: 15px; 
-    border-style: none; 
+.hero {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
-
-.navbar-end .btn:hover {
-    background-color: #01204E;
-    color: #fff;
-    margin-left: 15px; 
-    border-style: none; 
+.hero-content {
+  width: 100%;
 }
-
-.text-5xl {
-    color: black; 
+.max-w-md {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
-
-.div_back .btn {
-    background-color: #5AB2FF;
-    color: #fff;
-    border-style: none; 
-}
-
-.div_back .btn:hover {
-    background-color: #01204E;
-    color: #fff;
-    border-style: none; 
-}
-
-.footer {
-    background-color: #01204E; 
-}
-
-.feature_items {
-    margin: 20px; 
-}
-
-.carousel-item{
-    width: 400px; 
-    height: 500px; 
-}
-
-.py-6 {
-    color: rgb(31, 31, 31); 
-}
-
-.logo {
-    max-width: 100px;
-    height: auto;
-}
-
-.site-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.banner {
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
-    border-width: 18px;
-    border-color: #aaaaaa;
-    padding: 20px;
-    width: 100%;
-    max-width: 800px;
-}
-
 .section-heading {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: black;
-    padding: 10px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  padding: 10px;
 }
-
-@media (max-width: 1024px) {
-  .hero-content {
-    flex-direction: column;
-  }
-
-  .navbar-center h1 {
-    font-size: 32px;
-  }
-
-  .section-heading {
-    font-size: 24px;
-  }
-
-  .feature_items {
-    margin: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-center h1 {
-    font-size: 24px;
-  }
-
-  .navbar-end .btn {
-    margin-left: 10px;
-  }
-
-  .section-heading {
-    font-size: 20px;
-  }
-
-  .feature_items h1 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-end .btn {
-    margin-left: 5px;
-  }
-
-  .section-heading {
-    font-size: 18px;
-  }
-
-  .feature_items h1 {
-    font-size: 18px;
-  }
+.banner {
+  background-color: white;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-radius: 15px;
+  border-width: 18px;
+  border-color: #aaaaaa;
 }
 </style>
